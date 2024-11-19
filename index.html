@@ -1,1 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Sebastián Ortiz</title>
+    <!-- Bootstrap CSS desde CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Raleway:wght@600&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+        .navbar {
+            background-color: #007bff;
+        }
+        .navbar-brand {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            color: #fff;
+        }
+        .nav-link {
+            color: #f8f9fa !important;
+            font-weight: 500;
+        }
+        .nav-link:hover {
+            color: #ffd700 !important;
+        }
+        .hero {
+            background: linear-gradient(to right, #007bff, #6c757d);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-family: 'Raleway', sans-serif;
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+        }
+        .btn-primary {
+            background-color: #ffd700;
+            border: none;
+            color: #343a40;
+            font-weight: 700;
+        }
+        .btn-primary:hover {
+            background-color: #ffc107;
+        }
+        .section {
+            padding: 60px 20px;
+        }
+        .section h2 {
+            font-family: 'Raleway', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #007bff;
+        }
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .success-message {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Sebastián Ortiz</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#mi-portafolio">Mi Portafolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#educacion">Educación</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <h1>Sebastián Ortiz</h1>
+            <p>Estudiante de Ingeniería en Software con experiencia en el desarrollo de proyectos académicos y pasión por la tecnología y la programación.</p>
+            <a href="#mi-portafolio" class="btn btn-primary">Ver Mis Proyectos</a>
+        </div>
+    </section>
+
+    <!-- Portafolio Section -->
+    <section class="section" id="mi-portafolio">
+        <div class="container">
+            <h2>Mi Portafolio</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Sistema de Blogs</h3>
+                    <p>Un sistema de blogs diseñado para compartir contenido de manera organizada y eficiente, enfocado en la experiencia del usuario.</p>
+                </div>
+                <div class="col-md-6">
+                    <h3>Plataforma Educativa</h3>
+                    <p>Una plataforma básica de interacción entre estudiantes y profesores, que incluye tareas, calificaciones y herramientas de colaboración.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Educación Section -->
+    <section class="section bg-light" id="educacion">
+        <div class="container">
+            <h2>Educación</h2>
+            <p class="text-center">Actualmente estudiante de Ingeniería en Software en la Universidad Técnica de Ambato. Egresado del colegio Luis A. Martínez, con título de bachillerato.</p>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section class="section" id="contacto">
+        <div class="container">
+            <h2>Contáctame</h2>
+            <p class="text-center">Si deseas comunicarte conmigo, aquí tienes mis datos de contacto:</p>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <h4>Envíame un mensaje:</h4>
+                    <form id="contact-form">
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="mensaje" name="mensaje" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                    <div id="success-message" class="alert alert-success success-message">
+                        ¡Gracias por tu mensaje! Me pondré en contacto contigo pronto.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Sebastián Ortiz. Todos los derechos reservados.</p>
+        <p><a href="#contacto">Contáctame</a></p>
+    </footer>
+
+    <!-- JavaScript para manejar el formulario -->
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Evitar el envío real del formulario
+            document.getElementById("success-message").style.display = "block"; // Mostrar mensaje de éxito
+            document.getElementById("contact-form").reset(); // Limpiar formulario
+        });
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
