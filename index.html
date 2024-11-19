@@ -4,41 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio de Sebastián Ortiz</title>
-    <!-- Bootstrap CSS desde CDN -->
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Raleway:wght@600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            background-color: #f8f9fa;
-            color: #343a40;
+            background-color: #f4f4f4;
+            color: #333;
         }
         .navbar {
-            background-color: #007bff;
+            background-color: #2c3e50;
         }
         .navbar-brand {
             font-family: 'Raleway', sans-serif;
             font-weight: 700;
-            color: #fff;
+            color: #ecf0f1;
         }
         .nav-link {
-            color: #f8f9fa !important;
-            font-weight: 500;
+            color: #ecf0f1 !important;
         }
         .nav-link:hover {
-            color: #ffd700 !important;
+            color: #1abc9c !important;
         }
         .hero {
-            background: linear-gradient(to right, #007bff, #6c757d);
+            background: linear-gradient(to right, #2c3e50, #34495e);
             color: white;
             padding: 100px 20px;
             text-align: center;
         }
         .hero h1 {
-            font-family: 'Raleway', sans-serif;
             font-size: 3.5rem;
             margin-bottom: 10px;
         }
@@ -47,13 +46,11 @@
             margin-bottom: 20px;
         }
         .btn-primary {
-            background-color: #ffd700;
+            background-color: #1abc9c;
             border: none;
-            color: #343a40;
-            font-weight: 700;
         }
         .btn-primary:hover {
-            background-color: #ffc107;
+            background-color: #16a085;
         }
         .section {
             padding: 60px 20px;
@@ -61,22 +58,32 @@
         .section h2 {
             font-family: 'Raleway', sans-serif;
             font-size: 2.5rem;
-            margin-bottom: 20px;
             text-align: center;
-            color: #007bff;
+            color: #2c3e50;
+            margin-bottom: 40px;
+        }
+        .card {
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .contact-icons i {
+            font-size: 2rem;
+            margin: 10px;
+            color: #1abc9c;
+        }
+        .contact-icons i:hover {
+            color: #16a085;
         }
         footer {
-            background-color: #343a40;
-            color: #fff;
-            padding: 20px;
+            background-color: #2c3e50;
+            color: #ecf0f1;
             text-align: center;
-        }
-        footer a {
-            color: #ffd700;
-            text-decoration: none;
-        }
-        footer a:hover {
-            text-decoration: underline;
+            padding: 20px;
         }
     </style>
 </head>
@@ -90,18 +97,10 @@
             </button>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#inicio">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#mi-portafolio">Mi Portafolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#educacion">Educación</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contacto">Contacto</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#mi-portafolio">Portafolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
                 </ul>
             </div>
         </div>
@@ -111,7 +110,7 @@
     <section class="hero" id="inicio">
         <div class="container">
             <h1>Sebastián Ortiz</h1>
-            <p>Estudiante de Ingeniería en Software con experiencia en el desarrollo de proyectos académicos y pasión por la tecnología y la programación.</p>
+            <p>Estudiante apasionado de Ingeniería en Software. Me especializo en proyectos que integran funcionalidad y diseño.</p>
             <a href="#mi-portafolio" class="btn btn-primary">Ver Mis Proyectos</a>
         </div>
     </section>
@@ -119,25 +118,63 @@
     <!-- Portafolio Section -->
     <section class="section" id="mi-portafolio">
         <div class="container">
-            <h2>Mi Portafolio</h2>
+            <h2>Portafolio</h2>
             <div class="row">
                 <div class="col-md-6">
-                    <h3>Sistema de Blogs</h3>
-                    <p>Un sistema de blogs diseñado para compartir contenido de manera organizada y eficiente, enfocado en la experiencia del usuario.</p>
+                    <div class="card p-3">
+                        <h3>Sistema de Blogs</h3>
+                        <img src="ruta_imagen_blog.jpg" class="img-fluid" alt="Imagen del Sistema de Blogs">
+                        <p>Aplicación para compartir contenido organizado, con énfasis en accesibilidad y experiencia del usuario.</p>
+                    </div>
                 </div>
                 <div class="col-md-6">
-                    <h3>Plataforma Educativa</h3>
-                    <p>Una plataforma básica de interacción entre estudiantes y profesores, que incluye tareas, calificaciones y herramientas de colaboración.</p>
+                    <div class="card p-3">
+                        <h3>Plataforma Educativa</h3>
+                        <img src="ruta_imagen_educativa.jpg" class="img-fluid" alt="Imagen de la Plataforma Educativa">
+                        <p>Herramienta para estudiantes y profesores, con tareas, calificaciones, y herramientas colaborativas.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Educación Section -->
-    <section class="section bg-light" id="educacion">
+    <!-- Lenguajes Section -->
+    <section class="section bg-light">
         <div class="container">
-            <h2>Educación</h2>
-            <p class="text-center">Actualmente estudiante de Ingeniería en Software en la Universidad Técnica de Ambato. Egresado del colegio Luis A. Martínez, con título de bachillerato.</p>
+            <h2>Lenguajes que manejo</h2>
+            <div class="row text-center">
+                <div class="col-md-3"><i class="fab fa-java fa-3x"></i><p>Java</p></div>
+                <div class="col-md-3"><i class="fab fa-html5 fa-3x"></i><p>HTML</p></div>
+                <div class="col-md-3"><i class="fab fa-css3-alt fa-3x"></i><p>CSS</p></div>
+                <div class="col-md-3"><i class="fab fa-js fa-3x"></i><p>JavaScript</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre mí Section -->
+    <section class="section" id="sobre-mi">
+        <div class="container">
+            <h2>Sobre mí</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card p-3">
+                        <h4>Formación</h4>
+                        <p>Estudiante de Ingeniería en Software en la Universidad Técnica de Ambato.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-3">
+                        <h4>Habilidades</h4>
+                        <p>Programación en Java, diseño de bases de datos, y desarrollo web full-stack.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-3">
+                        <h4>Objetivo</h4>
+                        <p>Crear soluciones que impacten positivamente en la sociedad a través de la tecnología.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -145,18 +182,17 @@
     <section class="section" id="contacto">
         <div class="container">
             <h2>Contacto</h2>
-            <p class="text-center">Puedes comunicarte conmigo a través de los siguientes medios:</p>
-            <p class="text-center">
-                <strong>Correo:</strong> <a href="mailto:sortiz7841@uta.edu.ec">sortiz7841@uta.edu.ec</a><br>
-                <strong>GitHub:</strong> <a href="https://github.com/SebastianOrtiz2004" target="_blank">https://github.com/SebastianOrtiz2004</a>
-            </p>
+            <p class="text-center">Estoy disponible para colaborar en proyectos. ¡Conecta conmigo!</p>
+            <div class="text-center contact-icons">
+                <a href="mailto:sortiz7841@uta.edu.ec"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/SebastianOrtiz2004" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 Sebastián Ortiz. Todos los derechos reservados.</p>
-        <p><a href="#contacto">Contáctame</a></p>
     </footer>
 
     <!-- Bootstrap JS -->
