@@ -146,7 +146,24 @@
             padding: 20px;
             margin-top: 40px;
         }
+
+        .custom-election-card {
+    width: 200%; /* Ajusta el ancho de la tarjeta */
+    max-width: 550px; /* Establece un ancho máximo si es necesario */
+    height: auto; /* Altura adaptable */
+    margin: auto; /* Centra la tarjeta dentro de su contenedor */
+    border-radius: 15px; /* Opcional: mayor curvatura para estética */
+}
+
+.custom-election-card img {
+    height: 250px; /* Ajusta la altura específica de la imagen */
+    object-fit: cover; /* Muestra la imagen completa proporcionalmente */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
     </style>
+    
 </head>
 <body>
     <!-- Navbar -->
@@ -199,6 +216,16 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-6">
+                <div class="card custom-election-card">
+                    <img src="Img/elecciones_uta.jpeg" class="card-img-top" alt="Sistema de Elecciones">
+                    <div class="card-body">
+                        <h5 class="card-title">Sistema de Elecciones</h5>
+                        <p class="card-text">Aplicación para gestionar elecciones universitarias con eficiencia y transparencia.</p>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </div>
 </section>
