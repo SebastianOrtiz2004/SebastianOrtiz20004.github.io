@@ -166,23 +166,24 @@
     
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">Sebastián Ortiz</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#mi-portafolio">Portafolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-                </ul>
-            </div>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Sebastián Ortiz</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#mi-portafolio">Portafolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
+                <li class="nav-item"><a class="nav-link" href="#herramientas">Herramientas</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <!-- Hero Section -->
     <section class="hero" id="inicio">
@@ -232,45 +233,129 @@
 
 <div class="section-divider"></div>
 
-    <!-- Sobre mí Section -->
-    <section class="section" id="sobre-mi">
-        <div class="container">
-            <h2>Sobre mí</h2>
-            <div class="row text-center g-4">
-                <div class="col-md-4">
-                    <div class="card p-4">
+<!-- Sobre mí Section -->
+<section class="section" id="sobre-mi">
+    <div class="container">
+        <h2>Sobre mí</h2>
+        <div class="row text-center g-4">
+            <!-- Formación -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="Img/formacion.jpg" alt="Formación">
+                    <div class="card-body">
                         <h5 class="card-title">Formación</h5>
-                        <p>Estudiante de Ingeniería en Software en la Universidad Técnica de Ambato.</p>
+                        <p>Graduado como Bachiller del Colegio Luis A. Martínez. Actualmente soy estudiante de Ingeniería en Software en la Facultad de Ingeniería de Sistemas, Electrónica e Industrial de la Universidad Técnica de Ambato.</p>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card p-4">
-                        <h5 class="card-title">Habilidades</h5>
-                        <p>Java, diseño de bases de datos, desarrollo web full-stack.</p>
+            </div>
+            <!-- Quién soy -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="Img/quien_soy.jpg" alt="Quién soy">
+                    <div class="card-body">
+                        <h5 class="card-title">¿Quién soy?</h5>
+                        <p>Me llamo Sebastián Ortiz, tengo 20 años y soy un apasionado por el desarrollo de software. Mi meta es combinar la tecnología con la innovación para crear soluciones útiles y sostenibles.</p>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card p-4">
+            </div>
+            <!-- Objetivo -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="Img/objetivo.jpg" alt="Objetivo">
+                    <div class="card-body">
                         <h5 class="card-title">Objetivo</h5>
-                        <p>Crear soluciones tecnológicas innovadoras.</p>
+                        <p>Convertirme en un profesional capaz de liderar proyectos tecnológicos que impacten positivamente en la sociedad.</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+
     <div class="section-divider"></div>
 
-<!-- Contacto Section -->
-<section class="section" id="contacto">
+<!-- Herramientas Section -->
+<section class="section" id="herramientas">
     <div class="container">
-        <h2>Contacto</h2>
-        <p class="text-center">¡Hablemos sobre tecnología y proyectos!</p>
-        <div class="text-center contact-icons">
-            <a href="mailto:sortiz7841@uta.edu.ec"><i class="fas fa-envelope"></i></a>
-            <a href="https://github.com/SebastianOrtiz2004" target="_blank"><i class="fab fa-github"></i></a>
+        <h2>Herramientas</h2>
+        <div class="row text-center g-4">
+            <!-- Tarjeta Java -->
+            <div class="col-md-3">
+                <div class="card p-4">
+                    <i class="fab fa-java fa-3x" style="color: #5382a1;"></i>
+                    <h5 class="card-title mt-3">Java</h5>
+                    <p>Desarrollo de aplicaciones de escritorio y backend.</p>
+                </div>
+            </div>
+            <!-- Tarjeta JavaScript -->
+            <div class="col-md-3">
+                <div class="card p-4">
+                    <i class="fab fa-js-square fa-3x" style="color: #f7df1e;"></i>
+                    <h5 class="card-title mt-3">JavaScript</h5>
+                    <p>Desarrollo web dinámico y programación full-stack.</p>
+                </div>
+            </div>
+            <!-- Tarjeta PHP -->
+            <div class="col-md-3">
+                <div class="card p-4">
+                    <i class="fab fa-php fa-3x" style="color: #8993be;"></i>
+                    <h5 class="card-title mt-3">PHP</h5>
+                    <p>Programación backend para aplicaciones web dinámicas.</p>
+                </div>
+            </div>
+            <!-- Tarjeta HTML5 -->
+            <div class="col-md-3">
+                <div class="card p-4">
+                    <i class="fab fa-html5 fa-3x" style="color: #e34f26;"></i>
+                    <h5 class="card-title mt-3">HTML5</h5>
+                    <p>Estructuración de contenido web moderno y accesible.</p>
+                </div>
+            </div>
+            <!-- Tarjeta CSS3 -->
+            <div class="col-md-3">
+                <div class="card p-4">
+                    <i class="fab fa-css3-alt fa-3x" style="color: #264de4;"></i>
+                    <h5 class="card-title mt-3">CSS3</h5>
+                    <p>Estilización avanzada y diseño responsivo para páginas web.</p>
+                </div>
+            </div>
+            <!-- Tarjeta Python -->
+            <div class="col-md-3">
+                <div class="card p-4">
+                    <i class="fab fa-python fa-3x" style="color: #3776ab;"></i>
+                    <h5 class="card-title mt-3">Python</h5>
+                    <p>Automatización, análisis de datos y desarrollo de scripts.</p>
+                </div>
+            </div>
+            <!-- Tarjeta MySQL -->
+            <div class="col-md-3">
+                <div class="card p-4">
+                    <i class="fas fa-database fa-3x" style="color: #4479a1;"></i>
+                    <h5 class="card-title mt-3">MySQL</h5>
+                    <p>Diseño y manejo de bases de datos relacionales.</p>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
+<div class="section-divider"></div>
+
+
+
+    <!-- Contacto Section -->
+    <section class="section" id="contacto">
+        <div class="container text-center">
+            <h2>Contacto</h2>
+            <p>¡Hablemos sobre tecnología y proyectos!</p>
+            <div class="contact-icons">
+                <a href="mailto:sortiz7841@uta.edu.ec"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/SebastianOrtiz2004/SebastianOrtiz" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://wa.me/593998067093" target="_blank"><i class="fab fa-whatsapp" style="color: #494b49;"></i></a>
+            </div>
+        </div>
+    </section>
 
 <div class="section-divider"></div>
 
