@@ -98,6 +98,11 @@
         background: linear-gradient(to right, #4a4a4a, #ffffff, #4a4a4a);
         margin: 40px 0;
     }
+    .d-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
         .section h2 {
             font-family: 'Poppins', sans-serif;
             font-size: 2.5rem;
@@ -111,6 +116,7 @@
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
         }
         .card img {
             height: 200px;
@@ -169,7 +175,7 @@
     width: 170%; /* Ajusta el ancho de la tarjeta */
     max-width: 550px; /* Establece un ancho máximo si es necesario */
     height: auto; /* Altura adaptable */
-    margin: auto; /* Centra la tarjeta dentro de su contenedor */
+    margin: 0 auto; /* Centra horizontalmente la tarjeta */
     border-radius: 15px; /* Opcional: mayor curvatura para estética */
 }
 
@@ -222,7 +228,7 @@
                     <img src="Img/sistema_blog.jpg" class="card-img-top" alt="Sistema de Blogs">
                     <div class="card-body">
                         <h5 class="card-title">Sistema de Blogs</h5>
-                        <p class="card-text">Aplicación para compartir contenido organizado, con énfasis en accesibilidad y experiencia del usuario.</p>
+                        <p class="card-text">Plataforma diseñada para la creación y gestión de blogs personales o colectivos. Los usuarios pueden crear publicaciones, organizarlas en categorías, añadir comentarios, y expresar su apoyo mediante "likes". Esta aplicación promueve la interacción y el intercambio de ideas entre la comunidad de usuarios.</p>
                     </div>
                 </div>
             </div>
@@ -231,16 +237,16 @@
                     <img src="Img/plataforma_uta.png" class="card-img-top" alt="Plataforma Educativa">
                     <div class="card-body">
                         <h5 class="card-title">Plataforma Educativa</h5>
-                        <p class="card-text">Herramienta para estudiantes y profesores, con tareas, calificaciones y herramientas colaborativas.</p>
+                        <p class="card-text">Aplicación diseñada para gestionar actividades académicas en entornos educativos pequeños. Ofrece la posibilidad de loguearse como estudiante o profesor. Los profesores pueden crear y calificar tareas, mientras que los estudiantes pueden revisar sus notas y acceder a actividades asignadas. Un sistema sencillo pero funcional que cubre las necesidades básicas de un entorno educativo digital.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="d-flex justify-content-center">
                 <div class="card custom-election-card">
-                    <img src="Img/elecciones_uta.jpeg" class="card-img-top" alt="Sistema de Elecciones">
+                    <img src="Img/elecciones_uta.jpeg" class="card-img-top" alt="Sistema de Elecciones Universitarias">
                     <div class="card-body">
-                        <h5 class="card-title">Sistema de Elecciones</h5>
-                        <p class="card-text">Aplicación para gestionar elecciones universitarias con eficiencia y transparencia.</p>
+                        <h5 class="card-title">Sistema de Elecciones Universitarias</h5>
+                        <p class="card-text">Aplicación desarrollada como práctica para las elecciones al cargo de rector en una universidad. Este sistema no solo permite votar de manera eficiente y transparente, sino que también integra herramientas para visualizar noticias y eventos de los partidos políticos participantes. Incluye secciones con descripciones detalladas de los candidatos y un módulo para recibir sugerencias de los usuarios. </p>
                     </div>
                 </div>
             </div>
