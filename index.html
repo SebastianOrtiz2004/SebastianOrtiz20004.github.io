@@ -145,10 +145,28 @@
             text-align: center;
             padding: 20px;
             margin-top: 40px;
-        }
+        } 
 
-        .custom-election-card {
-    width: 200%; /* Ajusta el ancho de la tarjeta */
+    /* Ajustes para las tarjetas de "Sobre mí" */
+    .sobre-mi-card {
+        height: 100%; /* Garantiza que las tarjetas llenen el espacio */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .sobre-mi-card img {
+        height: 220px; /* Altura consistente para las imágenes */
+        object-fit: cover;
+    }
+
+    /* Ajuste especial para la tarjeta "¿Quién soy?" */
+    .sobre-mi-card.quien-soy img {
+        height: 280px; /* Mayor altura para esta imagen */
+    }
+
+.custom-election-card {
+    width: 170%; /* Ajusta el ancho de la tarjeta */
     max-width: 550px; /* Establece un ancho máximo si es necesario */
     height: auto; /* Altura adaptable */
     margin: auto; /* Centra la tarjeta dentro de su contenedor */
@@ -240,18 +258,18 @@
         <div class="row text-center g-4">
             <!-- Formación -->
             <div class="col-md-4">
-                <div class="card">
-                    <img src="Img/formacion.jpg" alt="Formación">
+                <div class="card sobre-mi-card">
+                    <img src="Img/formacion_perfil.avif" alt="Formación">
                     <div class="card-body">
                         <h5 class="card-title">Formación</h5>
-                        <p>Graduado como Bachiller del Colegio Luis A. Martínez. Actualmente soy estudiante de Ingeniería en Software en la Facultad de Ingeniería de Sistemas, Electrónica e Industrial de la Universidad Técnica de Ambato.</p>
+                        <p>Graduado como Bachiller del Colegio Luis A. Martínez. Actualmente estudiante de Ingeniería en Software en la Facultad de Ingeniería de Sistemas, Electrónica e Industrial de la Universidad Técnica de Ambato.</p>
                     </div>
                 </div>
             </div>
             <!-- Quién soy -->
             <div class="col-md-4">
-                <div class="card">
-                    <img src="Img/quien_soy.jpg" alt="Quién soy">
+                <div class="card sobre-mi-card quien-soy">
+                    <img src="Img/quiensoy_perfil.jpeg" alt="Quién soy">
                     <div class="card-body">
                         <h5 class="card-title">¿Quién soy?</h5>
                         <p>Me llamo Sebastián Ortiz, tengo 20 años y soy un apasionado por el desarrollo de software. Mi meta es combinar la tecnología con la innovación para crear soluciones útiles y sostenibles.</p>
@@ -260,8 +278,8 @@
             </div>
             <!-- Objetivo -->
             <div class="col-md-4">
-                <div class="card">
-                    <img src="Img/objetivo.jpg" alt="Objetivo">
+                <div class="card sobre-mi-card">
+                    <img src="Img/objetivo_perfil.jpeg" alt="Objetivo">
                     <div class="card-body">
                         <h5 class="card-title">Objetivo</h5>
                         <p>Convertirme en un profesional capaz de liderar proyectos tecnológicos que impacten positivamente en la sociedad.</p>
