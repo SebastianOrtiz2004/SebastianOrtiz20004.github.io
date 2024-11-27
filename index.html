@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Sebastián Ortiz</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: linear-gradient(135deg, #f7f7f7, #eaeaea, #8d8b8b);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+        }
+        @keyframes gradientAnimation {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+        .navbar {
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(74, 74, 74, 0.8));
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    .navbar-brand {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: #ffffff;
+    }
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -2px;
+        left: 50%;
+        background-color: #ffffff;
+        transition: all 0.3s ease;
+    }
+    .nav-link:hover::after {
+        width: 100%;
+        left: 0;
+    }
+
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: url('Img/fondo_perfil.png') no-repeat center center/cover;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+        }
+        .hero p {
+            font-size: 1.25rem;
+            color: #eaeaea;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+        }
+        .btn-primary {
+            background-color: #666;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #4a4a4a;
+            transform: scale(1.1);
+        }
+        .section {
+            padding: 80px 0;
+        }
+        .section-divider {
+        height: 2px;
+        background: linear-gradient(to right, #4a4a4a, #ffffff, #4a4a4a);
+        margin: 40px 0;
+    }
+    .d-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+        .section h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            text-align: center;
+            color: #4a4a4a;
+            margin-bottom: 40px;
+        }
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+        }
+        .card img {
+            height: 200px;
+            object-fit: cover;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .card-title {
+            font-family: 'Poppins', sans-serif;
+            font-weight: bold;
+            font-size: 1.4rem;
+            color: #4a4a4a;
+        }
+        .card-text {
+            color: #555;
+        }
+        .contact-icons i {
+            font-size: 2.5rem;
+            margin: 15px;
+            color: #4a4a4a;
+            transition: color 0.3s, transform 0.3s;
+        }
+        .contact-icons i:hover {
+            color: #666;
+            transform: scale(1.2);
+        }
+        footer {
+            background-color: #4a4a4a;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        } 
+
+    /* Ajustes para las tarjetas de "Sobre mí" */
+    .sobre-mi-card {
+        height: 100%; /* Garantiza que las tarjetas llenen el espacio */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .sobre-mi-card img {
+        height: 220px; /* Altura consistente para las imágenes */
+        object-fit: cover;
+    }
+
+    /* Ajuste especial para la tarjeta "¿Quién soy?" */
+    .sobre-mi-card.quien-soy img {
+        height: 280px; /* Mayor altura para esta imagen */
+    }
+
+.custom-election-card {
+    width: 170%; /* Ajusta el ancho de la tarjeta */
+    max-width: 550px; /* Establece un ancho máximo si es necesario */
+    height: auto; /* Altura adaptable */
+    margin: 0 auto; /* Centra horizontalmente la tarjeta */
+    border-radius: 15px; /* Opcional: mayor curvatura para estética */
+}
+
+.custom-election-card img {
+    height: 250px; /* Ajusta la altura específica de la imagen */
+    object-fit: cover; /* Muestra la imagen completa proporcionalmente */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+    </style>
+    
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Sebastián Ortiz</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#mi-portafolio">Portafolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
+                <li class="nav-item"><a class="nav-link" href="#herramientas">Herramientas</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container text-center">
+            <h1>Sebastián Ortiz</h1>
+            <p>Ingeniería en Software - Pasión por crear tecnología útil y moderna.</p>
+            <a href="#mi-portafolio" class="btn btn-primary">Ver Mis Proyectos</a>
+        </div>
+    </section>
+
+<!-- Portafolio Section -->
+<section class="section" id="mi-portafolio">
+    <div class="container">
+        <h2>Portafolio</h2>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="Img/sistema_blog.jpg" class="card-img-top" alt="Sistema de Blogs">
+                    <div class="card-body">
+                        <h5 class="card-title">Sistema de Blogs</h5>
+                        <p class="card-text">Plataforma diseñada para la creación y gestión de blogs personales o colectivos. Los usuarios pueden crear publicaciones, organizarlas en categorías, añadir comentarios, y expresar su apoyo mediante "likes". Esta aplicación promueve la interacción y el intercambio de ideas entre la comunidad de usuarios.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="Img/plataforma_uta.png" class="card-img-top" alt="Plataforma Educativa">
+                    <div class="card-body">
+                        <h5 class="card-title">Plataforma Educativa</h5>
+                        <p class="card-text">Aplicación diseñada para gestionar actividades académicas en entornos educativos pequeños. Ofrece la posibilidad de loguearse como estudiante o profesor. Los profesores pueden crear y calificar tareas, mientras que los estudiantes pueden revisar sus notas y acceder a actividades asignadas. Un sistema sencillo pero funcional que cubre las necesidades básicas de un entorno educativo digital.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <div class="card custom-election-card">
+                    <img src="Img/elecciones_uta.jpeg" class="card-img-top" alt="Sistema de Elecciones Universitarias">
+                    <div class="card-body">
+                        <h5 class="card-title">Sistema de Elecciones Universitarias</h5>
+                        <p class="card-text">Aplicación desarrollada como práctica para las elecciones al cargo de rector en una universidad. Este sistema no solo permite votar de manera eficiente y transparente, sino que también integra herramientas para visualizar noticias y eventos de los partidos políticos participantes. Incluye secciones con descripciones detalladas de los candidatos y un módulo para recibir sugerencias de los usuarios. </p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section class="section" id="sobre-mi">
+    <div class="container">
+        <h2>Sobre mí</h2>
+        <div class="row text-center g-4">
+            <!-- Formación -->
+            <div class="col-md-4">
+                <div class="card sobre-mi-card">
+                    <img src="Img/formacion_perfil.avif" alt="Formación">
+                    <div class="card-body">
+                        <h5 class="card-title">Formación</h5>
+                        <p>Graduado como Bachiller del Colegio Luis A. Martínez. Actualmente estudiante de Ingeniería en Software en la Facultad de Ingeniería de Sistemas, Electrónica e Industrial de la Universidad Técnica de Ambato.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Quién soy -->
+            <div class="col-md-4">
+                <div class="card sobre-mi-card quien-soy">
+                    <img src="Img/quiensoy_perfil.jpeg" alt="Quién soy">
+                    <div class="card-body">
+                        <h5 class="card-title">¿Quién soy?</h5>
+                        <p>Me llamo Sebastián Ortiz, tengo 20 años y soy un apasionado por el desarrollo de software. Mi meta es combinar la tecnología con la innovación para crear soluciones útiles y sostenibles.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Objetivo -->
+            <div class="col-md-4">
+                <div class="card sobre-mi-card">
+                    <img src="Img/objetivo_perfil.jpeg" alt="Objetivo">
+                    <div class="card-body">
+                        <h5 class="card-title">Objetivo</h5>
+                        <p>Convertirme en un profesional capaz de liderar proyectos tecnológicos que impacten positivamente en la sociedad.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <div class="section-divider"></div>
+
+<!-- Herramientas Section -->
+<section class="section" id="herramientas">
+    <div class="container">
+        <h2>Herramientas</h2>
+        <div class="row text-center g-4">
+            <!-- Tarjeta Java -->
+            <div class="col-md-3">
+                <div class="card p-4">
+                    <i class="fab fa-java fa-3x" style="color: #5382a1;"></i>
+                    <h5 class="card-title mt-3">Java</h5>
+                    <p>Desarrollo de aplicaciones de escritorio y backend.</p>
+                </div>
+            </div>
+            <!-- Tarjeta JavaScript -->
+            <div class="col-md-3">
+                <div class="card p-4">
+                    <i class="fab fa-js-square fa-3x" style="color: #f7df1e;"></i>
+                    <h5 class="card-title mt-3">JavaScript</h5>
+                    <p>Desarrollo web dinámico y programación full-stack.</p>
+                </div>
+            </div>
+            <!-- Tarjeta PHP -->
+            <div class="col-md-3">
+                <div class="card p-4">
+                    <i class="fab fa-php fa-3x" style="color: #8993be;"></i>
+                    <h5 class="card-title mt-3">PHP</h5>
+                    <p>Programación backend para aplicaciones web dinámicas.</p>
+                </div>
+            </div>
+            <!-- Tarjeta HTML5 -->
+            <div class="col-md-3">
+                <div class="card p-4">
+                    <i class="fab fa-html5 fa-3x" style="color: #e34f26;"></i>
+                    <h5 class="card-title mt-3">HTML5</h5>
+                    <p>Estructuración de contenido web moderno y accesible.</p>
+                </div>
+            </div>
+            <!-- Tarjeta CSS3 -->
+            <div class="col-md-3">
+                <div class="card p-4">
+                    <i class="fab fa-css3-alt fa-3x" style="color: #264de4;"></i>
+                    <h5 class="card-title mt-3">CSS3</h5>
+                    <p>Estilización avanzada y diseño responsivo para páginas web.</p>
+                </div>
+            </div>
+            <!-- Tarjeta Python -->
+            <div class="col-md-3">
+                <div class="card p-4">
+                    <i class="fab fa-python fa-3x" style="color: #3776ab;"></i>
+                    <h5 class="card-title mt-3">Python</h5>
+                    <p>Automatización, análisis de datos y desarrollo de scripts.</p>
+                </div>
+            </div>
+            <!-- Tarjeta MySQL -->
+            <div class="col-md-3">
+                <div class="card p-4">
+                    <i class="fas fa-database fa-3x" style="color: #4479a1;"></i>
+                    <h5 class="card-title mt-3">MySQL</h5>
+                    <p>Diseño y manejo de bases de datos relacionales.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<div class="section-divider"></div>
+
+
+
+    <!-- Contacto Section -->
+    <section class="section" id="contacto">
+        <div class="container text-center">
+            <h2>Contacto</h2>
+            <p>¡Hablemos sobre tecnología y proyectos!</p>
+            <div class="contact-icons">
+                <a href="mailto:sortiz7841@uta.edu.ec"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/SebastianOrtiz2004/SebastianOrtiz" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://wa.me/593998067093" target="_blank"><i class="fab fa-whatsapp" style="color: #494b49;"></i></a>
+            </div>
+        </div>
+    </section>
+
+<div class="section-divider"></div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Sebastián Ortiz. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
